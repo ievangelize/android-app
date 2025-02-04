@@ -42,7 +42,6 @@ void main() async {
   await revenue_cat.initialize(
     "appl_DJbgIgzeOPuhaffhQqxQzgVkLqo",
     "goog_FuzjVPWHDnfZwoEDMLIOqzZNHZP",
-    debugLogEnabled: true,
     loadDataAfterLaunch: true,
   );
 

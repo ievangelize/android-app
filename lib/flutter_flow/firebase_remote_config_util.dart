@@ -10,6 +10,8 @@ Future initializeFirebaseRemoteConfig() async {
       'appReview': false,
       'reviewPass': 'Testing123',
       'tinoURL': 'https://www.instagram.com/tino.chiwara/',
+      'jad': false,
+      'church': false,
     });
     await FirebaseRemoteConfig.instance.fetchAndActivate();
   } catch (error) {
