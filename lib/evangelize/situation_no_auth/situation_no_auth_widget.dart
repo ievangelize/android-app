@@ -380,6 +380,34 @@ evangelize ... */
                                                         ),
                                                       }.withoutNulls,
                                                     );
+                                                  } else {
+                                                    _model.btnClicked = false;
+                                                    safeSetState(() {});
+                                                    ScaffoldMessenger.of(
+                                                            context)
+                                                        .showSnackBar(
+                                                      SnackBar(
+                                                        content: Text(
+                                                          'Please try another prompt!',
+                                                          style: GoogleFonts
+                                                              .getFont(
+                                                            'Inter',
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primaryText,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .normal,
+                                                          ),
+                                                        ),
+                                                        duration: const Duration(
+                                                            milliseconds: 4000),
+                                                        backgroundColor:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .error,
+                                                      ),
+                                                    );
                                                   }
                                                 } else {
                                                   _model.btnClicked = false;
