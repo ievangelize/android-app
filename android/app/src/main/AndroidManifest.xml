@@ -42,13 +42,22 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <!-- Deep linking -->
+            <!-- Deep linking & App Linking -->
             <meta-data android:name="flutter_deeplinking_enabled" android:value="true" />
+            <!-- Intent filter for App Links -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="ievangelize" android:host="link.ievangelize.app" />
+                <data android:scheme="https" android:host="link.ievangelize.app" />
+            </intent-filter>
+
+            <!-- Intent filter for Custom URI Scheme -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ievangelize" android:host="ievangelize.app" />
             </intent-filter>
 
         </activity>
